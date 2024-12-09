@@ -47,7 +47,7 @@ const Card = () => {
          </div>
 
        
-         <div className='flex items-center justify-between w-full text-xs text-[#9C9C9C] px-4 pb-2'>
+         <div className='flex items-center justify-between w-full text-xs text-[#9C9C9C] px-4 pb-2 max-sm:flex-col'>
             <p>0,35€/Pièce · RÉF : VABGN5</p>
             <p className='px-2 py-1 bg-gray-100 rounded-full'>20 pieces</p>
          </div>
