@@ -5,7 +5,7 @@ import { MoveRightIcon } from 'lucide-react'
 
 const Banner = () => {
    return (
-      <div className="w-full bg-pink-50 min-h-[560px] flex justify-center py-10 text-center md:mt-16">
+      <div className="w-full bg-pink-50 min-h-[560px] flex justify-center py-10 text-center md:mt-16 ">
 
          <div className="max-w-7xl px-6">
             <p className="text-xl">On s&rsquo;occupe de <span className="font-bold text-[#5CD2DD]">tout</span></p>
@@ -46,8 +46,8 @@ const Banner = () => {
                </div>
 
 
-               <div className="w-full sm:w-1/2 bg-[#f3cfe1] md:py-8 px-4 rounded-lg flex flex-col items-center gap-4 ">
-                  <p className="text-xl font-medium">
+               <div className="w-full sm:w-1/2 bg-[#f3cfe1] md:py-8 px-4 rounded-lg flex flex-col items-center gap-4">
+                  <p className="md:text-xl max-sm:text-sm font-medium">
                      S&rsquo;inscrire & economiser <span className="text-[#5CD2DD]">10%</span>
                   </p>
                   <p className="text-xs text-[#BDA2B0] text-left">
@@ -55,7 +55,7 @@ const Banner = () => {
                   </p>
 
 
-                  <div className="w-full flex items-center gap-4 mt-4">
+                  <div className="w-full flex items-center gap-4 md:mt-4 max-sm:py-4">
                      <input
                         className="p-2 w-full sm:w-[410px] rounded"
                         type="text"
