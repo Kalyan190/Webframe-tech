@@ -21,9 +21,9 @@ const Navbar = () => {
                   <input
                      type="text"
                      placeholder="Rechercher un product"
-                     className="border-none h-[18px] md:w-[600px] outline-none bg-[#F9FAFB]"
+                     className="border-none h-[18px] max-sm:w-[80px] md:w-[600px] outline-none bg-[#F9FAFB]"
                   />
-                  <div className="bg-white">
+                  <div className="bg-white max-sm:hidden">
                      <Image src={image.search} alt="error" />
                   </div>
                </div>
