@@ -105,10 +105,10 @@ const Product = () => {
               
                
                   <p className="text-xs text-[#9C9C9C] py-3">
-                     Festi vous propose à la location un/une "Jewel – grand couteau/10pc" pour votre
-                     évenement et ce dès 0,35 € / pièce (HTVA). Que ce soit pour votre mariage, une fête
-                     d'anniversaire ou du personnel, ce produit a fait l'objet d'une sélection rigoureuse
-                     par notre équipe.
+                  Festi vous propose à la location un/une &quot;Jewel – grand couteau/10pc&quot; pour votre
+                  évenement et ce dès 0,35 € / pièce (HTVA). Que ce soit pour votre mariage, une fête
+                  d&apos;anniversaire ou du personnel, ce produit a fait l&apos;objet d&apos;une sélection rigoureuse
+                  par notre équipe.
                   </p>
             
             </div>
