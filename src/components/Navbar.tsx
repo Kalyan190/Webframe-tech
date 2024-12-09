@@ -6,7 +6,13 @@ import { useState } from 'react';
 import { Heart } from 'lucide-react';
 
 const Navbar = () => {
-   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+   const [activeLink, setActiveLink] = useState('/')
+
+   const handleLinkClick = (path:string) => {
+      setActiveLink(path);
+   };
+
    return (
       <nav className="bg-white text-black px-4 py-2 border-b">
 
@@ -37,7 +43,7 @@ const Navbar = () => {
                </div>
 
                <div className="flex items-center gap-1">
-                  <Heart className='hover:text-pink-500 cursor-pointer'/>
+                  <Heart className='hover:text-pink-500 cursor-pointer' />
                   <p className="text-xs font-medium">Mes favoris</p>
                   <button className="text-xs bg-[#CAD2D566] rounded-full px-2 font-medium">24</button>
                </div>
@@ -68,36 +74,64 @@ const Navbar = () => {
          {isMobileMenuOpen && (
             <div className="md:hidden bg-white shadow-lg p-4">
                <ul className="space-y-4">
-                  <li><Link href="/">ART DE LA TABLE</Link></li>
-                  <li><Link href="/">MOBILIER</Link></li>
-                  <li><Link href="/">NAPPAGE</Link></li>
-                  <li><Link href="/">MATERIEL DE SALLE</Link></li>
-                  <li><Link href="/">CUISINE</Link></li>
-                  <li><Link href="/">BARBECUE</Link></li>
-                  <li><Link href="/">TENTE</Link></li>
-                  <li><Link href="/">CHAUFFAGE</Link></li>
-                  <li><Link href="/">PODIUM-PISTE DE DANSE</Link></li>
-                  <li><Link href="/">SON ET LUMIERE</Link></li>
-                  <li><Link href="/">PACKS</Link></li>
-                  <li><Link href="/">CONSOMMABLES</Link></li>
+                  {[
+                     { name: 'ART DE LA TABLE', path: '/' },
+                     { name: 'MOBILIER', path: '/dashboard' },
+                     { name: 'NAPPAGE', path: '/dashboard' },
+                     { name: 'MATERIEL DE SALLE', path: '/dashboard' },
+                     { name: 'BARBECUE', path: '/dashboard' },
+                     { name: 'TENTE', path: '/dashboard' },
+                     { name: 'CHAUFFAGE', path: '/dashboard' },
+                     { name: 'PODIUM-PISTE DE DANSE', path: '/dashboard' },
+                     { name: 'SON ET LUMIERE', path: '/dashboard' },
+                     { name: 'PACKS', path: '/dashboard' },
+                     { name: 'CONSOMMABLES', path: '/dashboard' },
+
+
+                  ].map((link) => (
+                     <li key={link.name}>
+                        <Link
+                           href={link.path}
+                           className={`${activeLink === link.path ? 'text-blue-500 border-b-2 border-blue-600' : 'text-gray-700'
+                              } hover:text-blue-500 `}
+                           onClick={() => handleLinkClick(link.path)}
+                        >
+                           {link.name}
+                        </Link>
+                     </li>
+                  ))}
                </ul>
             </div>
          )}
 
          <div className="max-w-7xl mx-auto flex items-center">
             <ul className="hidden md:flex items-center justify-between w-full text-xs font-medium mt-3">
-               <li><Link href="/">ART DE LA TABLE</Link></li>
-               <li><Link href="/">MOBILIER</Link></li>
-               <li><Link href="/">NAPPAGE</Link></li>
-               <li><Link href="/">MATERIEL DE SALLE</Link></li>
-               <li><Link href="/">CUISINE</Link></li>
-               <li><Link href="/">BARBECUE</Link></li>
-               <li><Link href="/">TENTE</Link></li>
-               <li><Link href="/">CHAUFFAGE</Link></li>
-               <li><Link href="/">PODIUM-PISTE DE DANSE</Link></li>
-               <li><Link href="/">SON ET LUMIERE</Link></li>
-               <li><Link href="/">PACKS</Link></li>
-               <li><Link href="/">CONSOMMABLES</Link></li>
+               {[
+                  { name: 'ART DE LA TABLE', path: '/' },
+                  { name: 'MOBILIER', path: '/dashboard' },
+                  { name: 'NAPPAGE', path: '/dashboard' },
+                  { name: 'MATERIEL DE SALLE', path: '/dashboard' },
+                  { name: 'BARBECUE', path: '/dashboard' },
+                  { name: 'TENTE', path: '/dashboard' },
+                  { name: 'CHAUFFAGE', path: '/dashboard' },
+                  { name: 'PODIUM-PISTE DE DANSE', path: '/dashboard' },
+                  { name: 'SON ET LUMIERE', path: '/dashboard' },
+                  { name: 'PACKS', path: '/dashboard' },
+                  { name: 'CONSOMMABLES', path: '/dashboard' },
+
+
+               ].map((link) => (
+                  <li key={link.name}>
+                     <Link
+                        href={link.path}
+                        className={`${activeLink === link.path ? 'text-blue-500 border-b-2 border-blue-600' : 'text-gray-700'
+                           } hover:text-blue-500 `}
+                        onClick={() => handleLinkClick(link.path)}
+                     >
+                        {link.name}
+                     </Link>
+                  </li>
+               ))}
             </ul>
          </div>
 

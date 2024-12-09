@@ -8,7 +8,7 @@ import ThreeProduct from "@/components/ThreeProduct";
 export default function Home() {
   return (
     <div >
-      <Navbar/>
+      {/* <Navbar/> */}
       <Product/>
       <ArticleSimilar/>
       <ThreeProduct/>
