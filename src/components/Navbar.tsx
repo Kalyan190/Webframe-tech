@@ -17,11 +17,11 @@ const Navbar = () => {
                   <Image src={image.company_logo} alt="error" className="w-[64.12px]" />
                </Link>
 
-               <div className="flex items-center md:w-[700px] h-[40px] px-4 bg-[#F9FAFB] rounded justify-between hover:border hover:border-[#0093D0]">
+               <div className="flex items-center md:w-[700px] h-[40px] px-4 bg-[#F9FAFB] rounded md:justify-between max-sm:justify-center max-sm:ml-6 hover:border hover:border-[#0093D0]">
                   <input
                      type="text"
                      placeholder="Rechercher un product"
-                     className="border-none h-[18px] max-sm:w-[80px] md:w-[600px] outline-none bg-[#F9FAFB]"
+                     className="border-none h-[18px] max-sm:w-[90px] md:w-[600px] outline-none bg-[#F9FAFB]"
                   />
                   <div className="bg-white max-sm:hidden">
                      <Image src={image.search} alt="error" />
